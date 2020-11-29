@@ -143,8 +143,11 @@ public class main extends JavaPlugin implements Listener {
                 }else {
                     if(sign.getLine(0).equalsIgnoreCase(ChatColor.GOLD+"[trade]") & hasc(block.getLocation())){
                         ItemStack[] it = {null, null};
-
-                        ItemStack[] un = {getline(sign.getLine(1)), getline(sign.getLine(3))};
+                        ItemStack[] un;
+                        try {
+                            un = new ItemStack[]{getline(sign.getLine(1)), getline(sign.getLine(3))};
+                            }
+                        catch(Exception e){return;}
                         final boolean[] cb = {false};
                         player.getInventory().forEach(new Consumer<ItemStack>() {
 
