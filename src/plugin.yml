@@ -1,0 +1,5 @@
+main: me.GameBoys.superTrade.main
+name: superTrade
+version: 1.1
+author: GameBoys
+api-version: 1.13
